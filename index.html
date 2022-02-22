@@ -37,7 +37,7 @@
 							<ul>
 								<li><a href="#KoreanNLP">Korean NLP - Film Analysis</a></li>
 								<li><a href="#FederalTimeSeries">Federal Salary Time Series Forecast</a></li>
-								<li><a href="argt">Blob Squish Factor Optimizer</a></li>
+								<li><a href="#ImageColorization">Colorization of Black/White Images</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -160,15 +160,25 @@
 							<p>From the confirmatory data analysis, various parameters of the models were checked with the AIC criterion and it was found that the ideal SARIMA model for this data set would be a SARIMA (4,1,4)  X (2,1,2)<sub>12</sub>. The model’s residual RACF was then graphed, and it was found that there was no significant correlation detected. Meaning the residuals are independent and white. The residuals also passed the normality testing by using the normal probability plot of the residuals. The model was also assumed to have passed the constant variance test and was ready for the forecasting and simulations phase.</p>
 							<p>The trend forecast can now be used to compare one’s own salary projection to see how they match up to a government worker’s projection, who in theory, should not be getting salary bumps other than reasons of inflation and rise in cost of living. Thus, if one’s salary projection is less than that of a government worker’s, it might indicate that they are not getting the compensation they deserve.  </p>
 						</article>
+						<!-- KoreanNLP -->
+						<article id="ImageColorization">	
+							<h2 class="major">Synopsis</h2>	
+							<p>In the past few years, instant image colorization has been made widely accessible and popular online. Before, it would take digital artists numerous hours to convert a black and white photo into a colored one. The quality is still more lacking than if a human artist took hours to retouch it; however, the fact that it takes a DL model almost instantly to colorize an image is a huge merit. However, since the release of the publication ‘Colorful Image Colorization’ (R. Zhang, P. Isola, A. A. Efros), rapid BW image conversion was made possible and has been developing even more since then. Even ‘retouched’ movies where old black and white films are colorized have seemingly became more widespread and commonly released ever since this paper was released. </p>	
+							<p>Since I have started ML projects, I have been thinking of doing a CNN project where I felt like I could generally use for my own personal sake. I started digging/searching for ideas but couldn’t decide what project to try out until I saw some old photos my grandma had with her family. She cherished the photos and I wanted to let her enjoy the photos – now with color. Although I could use an online image color converted, I thought it would be much more meaningful if it was with a model/script that I have done myself. Also, I felt that I would have better control over the color correction, tone, and general settings of the converted image if it was my own model. Plus, what better way to get into a ML project by making it personal – right?</p>
+							<h2 class="major">Background</h2>	
+							<p>Black and white images only require 1 channel containing a value between 0-255 for each pixel. For color images, its pixels are stored in RGB components. The 3 color channels are added for final colorized image. To convert a black and white image into a colored one, each pixel value would need be componentized into each of the 3 RGB channels. </p>
+							<p>The core idea of image colorization utilizes using another color space that is not RGB to extract color feature/characteristic from the original BW image. Lab color space was the proposed and utilized for that purpose. To emulate the work done by Zhang el al., the Lab color space must be used. Lab color is thought to do a good job of how humans perceive color. </p>
+							<p>Lab color space has 3 channels like RGB color space, but the channels are different. L channel is for lightness intensity, a channel is for green-red, and b channel is for blue-yellow. The L channel deals with the BW information from the input BW image. The a and b channel are responsible for the colors; thus, the model will be used to train/predict a and b channels. The combined parameters for L, a, and b channels are used to generate the output RGB image. </p>
+							<h2 class="major">Dataset</h2>	
+						</article>
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<!--<p>If you are curious about the details of my projects or just have general questions, feel free to reach out to me whenever! My email, linkedin, and github can be found below</p>-->
-								<p>If you are curious about the details of my projects or just have general questions, feel free to reach out to me whenever! My email and linkedin can be found below</p>
+								<p>If you are curious about the details of my projects or just have general questions, feel free to reach out to me whenever! My email, linkedin, and github can be found below</p>
 								<ul class="icons">
 									<li><a href="mailto: sonkelvinj@gmail.com.com" class="icon brands fa-google"><span class="label">Email</span></a></li>
 									<li><a href="https://www.linkedin.com/in/kelvin-son-65438899/" class="icon brands fa-linkedin"><span class="label">Linkedin/span></a></li>
-									<!--<li><a href="https://github.com/KelvinJSon" class="icon brands fa-github"><span class="label">GitHub</span></a></li>-->
+									<li><a href="https://github.com/KelvinJSon" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</article>
 
