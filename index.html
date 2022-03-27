@@ -177,18 +177,18 @@
 							<span class="image main"><img src="images/BW Colorization/BW01.png" alt="" /></span>	
 							<h2 class="major">Summary of Dataset</h2>
 							<p>The model showed extremely minimal loss. However, the resultant image was not satisfactory due the lack of images/computing power as mentioned in the synopsis. When I started this project, I had severely underestimated how much images/data I would require getting a satisfactory coloring. This statement was reflected by the github contributors I mentioned prior.</p>
-							<span class="image main"><img src="images/BW Colorization/BW02.PNG" alt="" /></span>	
+							<span class="image main"><img src="images/BW Colorization/BW02.png" alt="" /></span>	
 							<span class="image main"><img src="images/BW Colorization/BW03.PNG" alt="" /></span>	
 							<span class="image main"><img src="images/BW Colorization/BW04.PNG" alt="" /></span>								
 							<p>In the above image, the model was unable to fully color the initial BW image. However, it had started to pick up characteristics/features where it started to detect/identify humans in the center of the image. Outlines of the hair and patches of skin was showing shades of the correct color. The overall blacks such as the dress were not touched and was remained as the correct color.</p>
 							<h2 class="major">Applying Caffe Model</h2>
 							<p>To see how the process would look with a fully trained/mature model, I downloaded the pre-trained Caffe model from dropbox.com/s/dx0qvhhp5hbcx7z/colorization_release_v2.caffemodel?dl=1. Using the packages provided by https://github.com/PySimpleGUI/PySimpleGUI-Photo-Colorizer, I used the Caffe model to colorize the above two images as well. The test images were once again converted to Lab and the Caffe model was used to predict the a and b channels with the given L channel obtained from the input images. </p>
-							<span class="image main"><img src="images/BW Colorization/BW05.PNG" alt="" /></span>	
+							<span class="image main"><img src="images/BW Colorization/BW05.png" alt="" /></span>	
 							<p>The rightmost images for the two colorizations shows the work done by the Caffe model. It definitely performs better as the woman’s hair color and complexion looks much more natural. The old man’s colorization could be slightly better as his color saturation still leaves room for improvement. However, it is still a good improvement over the initial, quickly trained model.</p>
-							<span class="image main"><img src="images/BW Colorization/BW06.PNG" alt="" /></span>	
-							<span class="image main"><img src="images/BW Colorization/BW07.PNG" alt="" /></span>	
+							<span class="image main"><img src="images/BW Colorization/BW06.png" alt="" /></span>	
+							<span class="image main"><img src="images/BW Colorization/BW07.png" alt="" /></span>	
 							<p>As the results were satisfactory, I used the model to colorize my grandma’s old photo as well. You look full of color grandma!</p>
-							<span class="image main"><img src="images/BW Colorization/BW08.PNG" alt="" /></span>	
+							<span class="image main"><img src="images/BW Colorization/BW08.png" alt="" /></span>	
 						</article>
 						<!-- Contact -->
 							<article id="contact">
